@@ -23,10 +23,18 @@ E.g.:
 
     DB_PORT=8889
     DB_DATABASE=sundown_boulevard
+    
+
 
 ## Run migrations
 
     php artisan migrate
+
+## Install bootstrap 
+    
+    php artisan ui bootstrap
+    npm install
+    npm run dev
 
 ## Seed database
 
