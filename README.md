@@ -26,15 +26,15 @@ E.g.:
     
 
 
-## Run migrations
-
-    php artisan migrate
-
 ## Install bootstrap 
-    
+
     php artisan ui bootstrap
     npm install
     npm run dev
+
+## Run migrations
+
+    php artisan migrate
 
 ## Seed database
 
