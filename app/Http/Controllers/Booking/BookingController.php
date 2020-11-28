@@ -159,7 +159,18 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //stub
+        $reservation = Reservation::findOrFail($id);
+        if(auth()->user()->id==$reservation->user->id){
+            $reservation->delete();
+
+            return redirect('/bookings')->with('success', 'Booking has been deleted');
+        }
+        else{
+            return redirect('/bookings')->with('failiure', 'Access denied!');
+        }
+        
     }
+
+    
 
 }

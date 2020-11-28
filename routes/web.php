@@ -28,6 +28,8 @@ Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::get('/bookings',[BookingController::class, 'index'])->name('bookings');
 Route::post('/bookings', [BookingController::class, 'store']);
+Route::post('/bookings{id}',[BookingController::class, 'destroy'])->name('destroy');
+
 
 Route::get('/users', [UserController::class, 'index']);
 
